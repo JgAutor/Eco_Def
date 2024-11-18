@@ -1,0 +1,388 @@
+/* Reset de margens e paddings para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Faz a página ocupar 100% da altura */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f7f3e8; /* Cor de fundo da página */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 100px; /* Aumenta o espaçamento para não sobrepor a navbar */
+    padding-bottom: 60px; /* Deixa espaço para o rodapé fixo */
+    background-color: #f3ebc4;
+}
+
+/* Navbar */
+header {
+    background-color: #d7c099;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px; /* Aumenta a altura da navbar */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Container do Cabeçalho */
+.header-container {
+    display: flex;
+    justify-content: flex-start; /* Alinha à esquerda o logo, título e navbar */
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilo do logo */
+header .logo {
+    height: 10; /* Ajusta a altura do logo */
+    width: 10;
+    margin-right: 20px; /* Espaço entre o logo e o título */
+}
+
+/* Título do Navbar */
+h1 {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 10px; /* Adiciona espaço entre o logo e o título */
+}
+
+/* Navbar links */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Faz a navbar ocupar o espaço disponível */
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #fff;
+    background-color: #8b7d53; /* Cor de fundo no hover */
+    border-radius: 5px;
+}
+
+/* Botão "Quero Adotar" */
+.header-action {
+    margin-left: 20px;
+}
+
+.adopt-button {
+    background-color: #8b7d53;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.adopt-button:hover {
+    background-color: #6d5b3b; /* Cor mais escura no hover */
+    cursor: pointer;
+}
+
+/* Estilos das Seções */
+.intro, .testimonials, .adoption, .actions {
+    padding: 20px;
+    background-color: #f7f3e8;
+}
+
+/* Seção Adoção com cor diferente */
+.adoption {
+    background-color: #e6e1d7;
+}
+
+/* Estilos do Rodapé */
+footer {
+    background-color: #d7c099; /* Cor de fundo do seu site */
+    color: #333;
+    padding: 40px 20px;
+    font-size: 14px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o rodapé fique acima de outros elementos */
+    box-sizing: border-box;
+}
+
+/* Container do Rodapé */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-description h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.footer-description p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.footer-links, .footer-social, .footer-newsletter {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Títulos das seções no Rodapé */
+.footer-links h3, .footer-social h3, .footer-newsletter h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Listas no Rodapé */
+.footer-links ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li, .footer-social li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .footer-social a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    color: #8b7d53; /* Cor de destaque no hover */
+}
+
+/* Estilo do formulário de inscrição */
+.footer-newsletter form {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.footer-newsletter button {
+    background-color: #8b7d53;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+    background-color: #6d5b3b;
+}
+
+/* Rodapé Inferior - Direitos autorais */
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Melhorias responsivas */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-newsletter input {
+        width: 200px;
+    }
+}
+/* Estilo do logo */
+header .logo {
+    height: 150px; /* Ajusta a altura do logo (você pode ajustar conforme o tamanho do seu logo) */
+    width: auto;  /* Mantém a proporção correta da imagem */
+    margin-right: 20px; /* Espaço entre o logo e o título */
+}
+/* Estilo para a seção de imagem com quadro de texto */
+.about-image-section {
+    position: relative; /* Para que o quadro de texto possa ser posicionado em relação à imagem */
+}
+
+.about-image {
+    width: 100%; /* A imagem ocupa toda a largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.about-text-container {
+    position: absolute; /* Para posicionar o quadro de texto sobre a imagem */
+    top: 10%; /* Coloca o quadro um pouco abaixo do topo da imagem */
+    left: 5%; /* Deixa um pequeno espaço na esquerda */
+    width: 40%; /* Define a largura do quadro de texto */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
+    padding: 20px; /* Espaço interno para o texto */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.about-text-box {
+    color: #333;
+}
+
+.about-text-box h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-text-box p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.about-link {
+    display: inline-block;
+    background-color: #8b7d53; /* Cor de fundo */
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.about-link:hover {
+    background-color: #6d5b3b; /* Cor mais escura no hover */
+}
+@media (max-width: 768px) {
+    .about-text-container {
+        width: 80%; /* Aumenta a largura do quadro de texto em telas menores */
+        top: 20%; /* Ajusta a posição para que fique mais centralizado */
+        left: 10%; /* Ajusta a posição */
+    }
+
+    .about-text-box h2 {
+        font-size: 24px; /* Diminui o tamanho do título em telas menores */
+    }
+
+    .about-text-box p {
+        font-size: 14px; /* Diminui o tamanho do texto em telas menores */
+    }
+}
+
+.bordaOng {
+    border: 5px solid #798c32;
+    border-radius: 25px;    
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #798c32;
+    display: flex;
+    width: 80%;
+}
+
+.h1Ong, .pOng, .h4Ong {
+    color: #f2f2f2;
+    flex: 0 0 60%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: expandirTexto 1.5s ease-out forwards;
+}
+
+.complementoOng {
+    flex: 0 0 40%;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #f2f2f2;
+    border-radius: 25px;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: expandir 1.5s ease-out forwards;
+}
+
+a.h4Ong {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ebf2ae;
+    color: #798c32;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+a.h4Ong:hover {
+    background-color: #f2f2f2;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+a.h4Ong:active {
+    transform: translateY(2px);
+}
+
+@keyframes expandir {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes expandirTexto {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

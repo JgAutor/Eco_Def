@@ -1,0 +1,78 @@
+/*A formatação de ambas as paginas*/
+
+.bordaOng {
+    border: 5px solid #798c32;
+    border-radius: 25px;    
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #798c32;
+    display: flex;
+    width: 80%;
+}
+
+.h1Ong, .pOng, .h4Ong {
+    color: #f2f2f2;
+    flex: 0 0 60%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: expandirTexto 1.5s ease-out forwards;
+}
+
+.complementoOng {
+    flex: 0 0 40%;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #f2f2f2;
+    border-radius: 25px;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: expandir 1.5s ease-out forwards;
+}
+
+a.h4Ong {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ebf2ae;
+    color: #798c32;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+a.h4Ong:hover {
+    background-color: #f2f2f2;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+a.h4Ong:active {
+    transform: translateY(2px);
+}
+
+@keyframes expandir {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes expandirTexto {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
